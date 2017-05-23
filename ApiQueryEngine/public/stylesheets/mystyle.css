@@ -1,0 +1,52 @@
+li{
+    padding:5px;
+    display: flex;
+    list-style: none;
+}
+span{
+    width : 20%;
+}
+input{
+    width:60%;
+}
+.button{
+    
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background: blue;
+}
+.container{
+        background-color: cyan;
+        border-radius: 2px;
+        display: flex;
+        height: 300px;
+}
+form{
+        margin: 2px;
+        width: 50%;
+        font-size: 12px;
+}
+#custom{
+    width:53%;
+}
+.tables{
+    font-size: 12px;
+}
+table{
+    table-layout: auto;
+    
+    border-collapse: separate;
+}
+
+td{ 
+    width: 100%;
+    vertical-align: inherit;
+    white-space:initial;
+}

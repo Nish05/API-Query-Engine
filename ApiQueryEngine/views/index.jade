@@ -1,0 +1,55 @@
+extends layout
+  
+block content
+    h1= title
+        .container
+            form#queryapi(name="Query Api", method ="post",action = '/queryApis')
+
+                    fieldset
+                            legend API
+                            ul
+                                li
+                                  span KeyWord
+                                  input#keyword(type="text", name="keyword")
+                                li
+                                  span Updated_Year
+                                  input#year(type="text", name="year")
+                                li
+                                  span Protocols
+                                  input(type="text", name="protocol")
+                                li
+                                  span Category
+                                  input(type="text", name="category")
+                                li
+                                  span Rating
+                                  - var ratings = ["=","<=",">="]
+                                  select(name='choice')
+                                    for item in ratings
+                                        option(selected=item) #{item}
+                                  
+                                  input(type="text", name="rating", id='custom')
+                                li
+                                  span Tags:
+                                  input(type="text", name="Tags")
+                                li
+                                  button.button(type="submit") SEARCH
+            form#querymash(name="Query Mashup", method ="post",action = '/queryMashup')
+
+                    fieldset
+                           legend MASHUP
+                           ul
+                                li
+                                    span KeyWord
+                                    input#keyword(type="text", name="keyword")
+                                li
+                                    span Updated_Year
+                                    input#year(type="text", name="year")
+                                li 
+                                    span Used Apis
+                                    input(type="text", name="apis")
+                                li
+                                    span Tags
+                                    input(type="text", name="Tags")
+                                li
+                                    button.button(type="submit") SEARCH 
+        

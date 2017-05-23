@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h1= title
+    div
+        table(border='1')
+          thead
+            each thing in queryRes
+                each val,key in thing
+                    th #{key}
+                - break
+          tbody
+            each thing in queryRes
+              tr
+                each val,key in thing
+                  td= val
